@@ -1,0 +1,66 @@
+<template 
+	format="5" 
+	revision="6"
+	minApi="16"
+	minBuildApi="23" 
+	name="Clean Fragment"
+	description="Creates some class files for Clean Component">
+
+	<category value="Clean Component" />
+	<formfactor value="Mobile" />
+	
+	<parameter
+            id="componentType"
+            name="Component Option"
+            type="enum"
+            default="type_fragment"
+            help="Select type of Component" >
+            <option id="type_fragment">Fragment</option>
+            <option id="type_holder">View Holder</option>
+    </parameter>
+    
+<!-- Start Type Fragment -->
+	<parameter 
+			id="fragmentClassName" 
+			name="Fragment Name" 
+			type="string"
+			default="MainFragment"
+			constraints="class|unique|nonempty" 
+			visibility="(componentType=='type_fragment')"
+			help="The name of the Fragment" />
+			
+	<parameter
+	        id="fragmentName"
+	        name="name"
+	        type="string"
+	        constraints="class|nonempty|unique"
+	        default="Main"
+	        visibility="false"
+	        suggest="${underscoreToCamelCase(classToResource(fragmentClassName))}"
+        	help="The name of the Fragment to create" />
+
+	<parameter 
+			id="fragmentLayoutName" 
+			name="Fragment Layout Name"
+			type="string" 
+			constraints="layout|unique|nonempty" 
+			suggest="fragment_${classToResource(fragmentName)}"
+			default="fragment_main" 
+			visibility="(componentType=='type_fragment')"
+			help="The name of the layout to create for the fragment" />
+			
+			
+<!-- End Type Fragment -->			
+
+		<!-- 128x128 thumb relative to template.xml -->
+	<thumbs>
+		<!-- default thumb is required -->
+		<thumb>template.png</thumb>
+		<thumb componentType="type_activity">activity.png</thumb>
+		<thumb componentType="type_fragment">fragment.png</thumb>
+		<thumb componentType="type_holder">holder.png</thumb>
+	</thumbs>
+
+	<globals file="globals.xml.ftl" />
+	<execute file="recipe.xml.ftl" />
+</template>

@@ -1,0 +1,64 @@
+<template 
+	format="5" 
+	revision="6"
+	minApi="16"
+	minBuildApi="23" 
+	name="Clean Recycler Adapter"
+	description="Creates some class files for Clean Component">
+
+	<category value="Clean Component" />
+	<formfactor value="Mobile" />
+	
+	<parameter 
+			id="adapterClassName" 
+			name="Adapter Name" 
+			type="string"
+			default="MainAdapter"
+			constraints="class|unique|nonempty" 
+			help="The name of the RecyclerView Adapter" />
+			
+	<parameter
+	        id="adapterName"
+	        name="name"
+	        type="string"
+	        constraints="class|nonempty|unique"
+	        default="Main"
+	        visibility="false"
+	        suggest="${underscoreToCamelCase(classToResource(adapterClassName))}"
+        	help="The name of the Adapter to create" />
+        	
+	<parameter 
+			id="viewHolderClassName" 
+			name="ViewHolder Name" 
+			type="string"
+			default="${underscoreToCamelCase(classToResource(adapterClassName))}ViewHolder"
+			constraints="class|unique|nonempty" 
+			help="The name of the ViewHolder" />
+			
+	<parameter
+            id="modelClassName"
+            name="Model Name" 
+            type="string"
+            constraints="class|exists"
+            default=""
+            help="The name of the ViewHolder"/>			
+
+	<parameter 
+			id="viewHolderLayoutName" 
+			name="ViewHolder Layout Name"
+			type="string" 
+			constraints="layout|unique|nonempty" 
+			suggest="custom_${classToResource(adapterClassName)}_item"
+			default="custom_main_item" 
+			help="The name of the layout to create for the ViewHolder" />
+			
+			
+		<!-- 128x128 thumb relative to template.xml -->
+	<thumbs>
+		<!-- default thumb is required -->
+		<thumb>template.png</thumb>
+	</thumbs>
+
+	<globals file="globals.xml.ftl" />
+	<execute file="recipe.xml.ftl" />
+</template>
