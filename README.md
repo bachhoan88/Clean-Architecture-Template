@@ -2,7 +2,7 @@
 
 This is an Android Studio template for Clean Architecture
 
-`Important`: All component of template were generate from [Clean-Architecture-Base](https://github.com/bachhoan88/CleanArchitecture)
+`Important`: All component of template only work when basic code generated from [Clean-Architecture-Base](https://github.com/bachhoan88/CleanArchitecture)
 
 ## Installation
 
@@ -28,7 +28,7 @@ Support
 -------
 
 If you've found an error in this sample, please file an issue to
-https://github.com
+https://github.com/bachhoan88/Clean-Architecture-Template/issues
 Patches are encouraged, and may be submitted by forking this project and
 submitting a pull request through GitHub.
 
