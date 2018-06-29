@@ -6,6 +6,7 @@
     	
 	    <instantiate from="root/src/app_package/fragment/Fragment.${ktOrJavaExt}.ftl" to="${escapeXmlAttribute(srcOut)}/${fragmentClassName}.${ktOrJavaExt}" />
 	    <instantiate from="root/src/app_package/fragment/FragmentNavigator.${ktOrJavaExt}.ftl" to="${escapeXmlAttribute(srcOut)}/${fragmentName}Navigator.${ktOrJavaExt}" />		    
-	    <instantiate from="root/src/app_package/fragment/FragmentViewModel.${ktOrJavaExt}.ftl" to="${escapeXmlAttribute(srcOut)}/${fragmentName}ViewModel.${ktOrJavaExt}" />		    
+	    <instantiate from="root/src/app_package/fragment/FragmentViewModel.${ktOrJavaExt}.ftl" to="${escapeXmlAttribute(srcOut)}/${fragmentName}ViewModel.${ktOrJavaExt}" />
+	    <instantiate from="root/src/app_package/fragment/FragmentViewModelTest.${ktOrJavaExt}.ftl" to="${srcTestOut}/${fragmentName}ViewModelTest.${ktOrJavaExt}" />	
     </#if>
 </recipe>

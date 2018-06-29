@@ -4,6 +4,9 @@ This is an Android Studio template for Clean Architecture
 
 `Important`: All component of template only work when basic code generated from [Clean-Architecture-Base](https://github.com/bachhoan88/CleanArchitecture)
 
+## Demo
+![Create Fragment Component](demo/fragment.gif "Create Fragment")
+
 ## Installation
 
 #### For Mac:

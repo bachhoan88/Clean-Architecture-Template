@@ -5,6 +5,7 @@
 	<global id="manifestOut" value="${manifestDir}" />
     <global id="resOut" value="${resDir}" />
     <global id="srcOut" value="${srcDir}/${slashedPackageName(packageName)}" />
+    <global id="srcTestOut" value="${escapeXmlAttribute(projectOut)}/src/test/java/${slashedPackageName(packageName)}" />
     <global id="fragmentPackage" value="<#if isNewProject>${packageName}<#else>${applicationPackage}</#if>.ui.${classToResource(fragmentClassName)}" />
     <global id="basePackage" value="<#if isNewProject>${packageName}<#else>${applicationPackage}</#if>.ui.base" />
     <global id="appPack" value="<#if isNewProject>${packageName}<#else>${applicationPackage}</#if>" />
