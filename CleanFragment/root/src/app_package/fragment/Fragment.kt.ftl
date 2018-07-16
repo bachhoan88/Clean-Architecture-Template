@@ -11,6 +11,9 @@ class ${fragmentClassName} : BaseFragment<Fragment${fragmentName}Binding, ${frag
     companion object {
         fun newInstance() = ${fragmentName}Fragment()
     }
+    
+    override val themeId: Int
+        get() = R.style.AppTheme_NoActionBar
 
     override val bindingVariable: Int
         get() = BR.viewModel
