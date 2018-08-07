@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="${fragmentPackage}.${fragmentName}ViewModel"/>
+            type="${packageName}.${fragmentName}ViewModel"/>
 
     </data>
     <android.support.constraint.ConstraintLayout
