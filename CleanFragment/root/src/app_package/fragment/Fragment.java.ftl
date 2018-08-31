@@ -11,8 +11,7 @@ import ${appPack}.R;
 import ${appPack}.databinding.Fragment${fragmentName}Binding;
 import ${basePackage}.BaseFragment;
 
-public class ${fragmentClassName} extends BaseFragment<Fragment${fragmentName}Binding, ${fragmentName}FragmentViewModel> implements
-        ${fragmentName}FragmentNavigator {
+public class ${fragmentClassName} extends BaseFragment<Fragment${fragmentName}Binding, ${fragmentName}FragmentViewModel> {
 
     @Inject
     ${fragmentName}FragmentViewModel ${classToResource(fragmentName)}FragmentViewModel;
@@ -29,7 +28,6 @@ public class ${fragmentClassName} extends BaseFragment<Fragment${fragmentName}Bi
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ${classToResource(fragmentName)}FragmentViewModel.setNavigator(this);
     }
 
     @Override

@@ -7,7 +7,7 @@ import ${appPack}.R
 import ${appPack}.base.BaseFragment
 import ${appPack}.databinding.Fragment${fragmentName}Binding
 
-class ${fragmentClassName} : BaseFragment<Fragment${fragmentName}Binding, ${fragmentName}ViewModel>(), ${fragmentName}Navigator {
+class ${fragmentClassName} : BaseFragment<Fragment${fragmentName}Binding, ${fragmentName}ViewModel>() {
     companion object {
         fun newInstance() = ${fragmentName}Fragment()
     }
@@ -23,8 +23,5 @@ class ${fragmentClassName} : BaseFragment<Fragment${fragmentName}Binding, ${frag
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel.navigator = this
     }
-
-
 }
