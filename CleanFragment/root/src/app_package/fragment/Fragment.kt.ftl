@@ -1,6 +1,6 @@
 package ${packageName}
 
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import ${appPack}.BR
 import ${appPack}.R
